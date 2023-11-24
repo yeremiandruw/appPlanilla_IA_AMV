@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DEEB359D-F956-406E-AAA6-E0A0E5F61E32}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>appPlanilla_IA_AMV</RootNamespace>
+    <AssemblyName>appPlanilla_IA_AMV</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bean\Empleado.cs" />
+    <Compile Include="dao\EmpleadoDAO.cs" />
+    <Compile Include="db\DB.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ui\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\frmPlanilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\frmPlanilla.Designer.cs">
+      <DependentUpon>frmPlanilla.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ui\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.resources\.safetable\org.eclipse.core.resources" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ui\Planilla\.classpath" />
+    <None Include="ui\Planilla\.metadata\.lock" />
+    <None Include="ui\Planilla\.metadata\.log" />
+    <None Include="ui\Planilla\.metadata\.mylyn\repositories.xml.zip" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.resources\.projects\.org.eclipse.egit.core.cmp\.location" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.resources\.root\.indexes\history.version" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.resources\.root\.indexes\properties.index" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.resources\.root\.indexes\properties.version" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.resources\.root\1.tree" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.core.resources.prefs" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.jdt.ui.prefs" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.jsch.core.prefs" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.jst.j2ee.webservice.ui.prefs" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.m2e.discovery.prefs" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.mylyn.context.core.prefs" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.mylyn.monitor.ui.prefs" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.mylyn.tasks.ui.prefs" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.ui.ide.prefs" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.ui.navigator.prefs" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.ui.prefs" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.ui.workbench.prefs" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.urischeme.prefs" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.e4.workbench\workbench.xmi" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.egit.core\.org.eclipse.egit.core.cmp\.project" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.egit.core\.org.eclipse.egit.core.cmp\.settings\org.eclipse.core.resources.prefs" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.jdt.core\assumedExternalFilesCache" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.jdt.core\externalFilesCache" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.jdt.core\nonChainingJarsCache" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.jdt.core\variablesAndContainers.dat" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.m2e.core\workspaceState.ser" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.mylyn.github.ui\avatars.ser" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.oomph.setup\workspace.setup" />
+    <None Include="ui\Planilla\.metadata\.plugins\org.eclipse.ui.intro\introstate" />
+    <None Include="ui\Planilla\.metadata\version.ini" />
+    <None Include="ui\Planilla\.project" />
+    <None Include="ui\Planilla\.settings\org.eclipse.core.resources.prefs" />
+    <None Include="ui\Planilla\.settings\org.eclipse.jdt.core.prefs" />
+    <None Include="ui\Planilla\bin\bean\Empleado.class" />
+    <None Include="ui\Planilla\bin\dao\EmpleadoDao.class" />
+    <None Include="ui\Planilla\bin\db\Db.class" />
+    <None Include="ui\Planilla\bin\ui\frmLogin%241.class" />
+    <None Include="ui\Planilla\bin\ui\frmLogin%242.class" />
+    <None Include="ui\Planilla\bin\ui\frmLogin%243.class" />
+    <None Include="ui\Planilla\bin\ui\frmLogin%244.class" />
+    <None Include="ui\Planilla\bin\ui\frmLogin%245.class" />
+    <None Include="ui\Planilla\bin\ui\frmLogin%246.class" />
+    <None Include="ui\Planilla\bin\ui\frmLogin%247.class" />
+    <None Include="ui\Planilla\bin\ui\frmLogin%248.class" />
+    <None Include="ui\Planilla\bin\ui\frmLogin.class" />
+    <None Include="ui\Planilla\bin\ui\frmPlanilla%241.class" />
+    <None Include="ui\Planilla\bin\ui\frmPlanilla.class" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ui\Planilla\.metadata\.plugins\org.eclipse.jdt.core\javaLikeNames.txt" />
+    <Content Include="ui\Planilla\.metadata\.plugins\org.eclipse.jdt.ui\OpenTypeHistory.xml" />
+    <Content Include="ui\Planilla\.metadata\.plugins\org.eclipse.jdt.ui\QualifiedTypeNameHistory.xml" />
+    <Content Include="ui\Planilla\.metadata\.plugins\org.eclipse.tips.ide\dialog_settings.xml" />
+    <Content Include="ui\Planilla\.metadata\.plugins\org.eclipse.ui.ide\dialog_settings.xml" />
+    <Content Include="ui\Planilla\.metadata\.plugins\org.eclipse.ui.workbench\dialog_settings.xml" />
+    <Content Include="ui\Planilla\.metadata\.plugins\org.eclipse.ui.workbench\workingsets.xml" />
+    <Content Include="ui\Planilla\abajo.png" />
+    <Content Include="ui\Planilla\agregar.png" />
+    <Content Include="ui\Planilla\arriba.png" />
+    <Content Include="ui\Planilla\bin\lib\mysql-connector-java-5.1.49 %281%29.jar" />
+    <Content Include="ui\Planilla\cancelar.png" />
+    <Content Include="ui\Planilla\editar.png" />
+    <Content Include="ui\Planilla\eliminar.png" />
+    <Content Include="ui\Planilla\Fondo.png" />
+    <Content Include="ui\Planilla\fondoApp.png" />
+    <Content Include="ui\Planilla\guardar.png" />
+    <Content Include="ui\Planilla\Logo.png" />
+    <Content Include="ui\Planilla\logoMenu.png" />
+    <Content Include="ui\Planilla\logoMenu_2.png" />
+    <Content Include="ui\Planilla\LogoPanel.png" />
+    <Content Include="ui\Planilla\menu11.png" />
+    <Content Include="ui\Planilla\menu12.png" />
+    <Content Include="ui\Planilla\menu13.png" />
+    <Content Include="ui\Planilla\menu21.png" />
+    <Content Include="ui\Planilla\menu22.png" />
+    <Content Include="ui\Planilla\menu23.png" />
+    <Content Include="ui\Planilla\menu24.png" />
+    <Content Include="ui\Planilla\menu25.png" />
+    <Content Include="ui\Planilla\menu26.png" />
+    <Content Include="ui\Planilla\src\bean\Empleado.java" />
+    <Content Include="ui\Planilla\src\dao\EmpleadoDao.java" />
+    <Content Include="ui\Planilla\src\db\Db.java" />
+    <Content Include="ui\Planilla\src\lib\mysql-connector-java-5.1.49 %281%29.jar" />
+    <Content Include="ui\Planilla\src\ui\frmLogin.java" />
+    <Content Include="ui\Planilla\src\ui\frmPlanilla.java" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ui\Planilla\.metadata\.mylyn\contexts\" />
+    <Folder Include="ui\Planilla\.metadata\.plugins\org.eclipse.core.resources\.history\" />
+    <Folder Include="ui\Planilla\.metadata\.plugins\org.eclipse.debug.core\" />
+    <Folder Include="ui\Planilla\.metadata\.plugins\org.eclipse.emf.common.ui\" />
+    <Folder Include="ui\Planilla\.metadata\.plugins\org.eclipse.mylyn.context.core\contexts\" />
+    <Folder Include="ui\Planilla\.metadata\.plugins\org.eclipse.mylyn.tasks.ui\" />
+    <Folder Include="ui\Planilla\.metadata\.plugins\org.eclipse.oomph.setup.ui\" />
+    <Folder Include="ui\Planilla\.metadata\.plugins\org.eclipse.tm.terminal.view.ui\" />
+    <Folder Include="ui\Planilla\.metadata\.plugins\org.eclipse.userstorage.oauth\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
