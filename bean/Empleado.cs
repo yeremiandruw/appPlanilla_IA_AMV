@@ -49,5 +49,7 @@ namespace appPlanilla_IA_AMV.bean
             idDistrito = int.Parse(dr["idDistrito"].ToString());
         }
             #endregion      
+
+        // cambios a subir
     }
 }
