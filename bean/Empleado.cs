@@ -50,6 +50,6 @@ namespace appPlanilla_IA_AMV.bean
         }
             #endregion      
 
-        // cambios a subir
+        // cambios a subir editando
     }
 }
